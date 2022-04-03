@@ -26,9 +26,9 @@
   ],
   "dependencies": {
     "@quasar/extras": "^1.0.0",
-    "axios": "^0.21.1",
+    "axios": "0.26.1",
     "core-js": "^3.6.5",
-    "npool-cli-v2": "0.0.29",
+    "npool-cli-v2": "0.0.39",
     "pinia": "^2.0.13",
     "quasar": "^2.0.0",
     "vue": "^3.0.0",
@@ -61,7 +61,8 @@
     "jest": "^27.5.1",
     "majestic": "^1.7.0",
     "pre-commit": "^1.2.2",
-    "ts-jest": "^27.1.3"
+    "ts-jest": "^27.1.3",
+    "npool-cli-v2": "0.0.39"
   },
   "browserslist": [
     "last 10 Chrome versions",

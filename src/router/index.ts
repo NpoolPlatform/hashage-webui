@@ -1,4 +1,5 @@
 import { route } from 'quasar/wrappers'
+import { api } from 'src/boot/axios'
 import {
   createMemoryHistory,
   createRouter,
@@ -6,6 +7,7 @@ import {
   createWebHistory
 } from 'vue-router'
 import routes from './routes'
+import { loginInterceptor } from 'npool-cli-v2'
 
 /*
  * If not building with SSR mode, you can
@@ -36,7 +38,7 @@ export default route(function (/* { store, ssrContext } */) {
 
   router.beforeEach((to, _, next) => {
     console.log('login interceptor', to, next)
-    // loginInterceptor(to, next)
+    loginInterceptor(api, to, next)
   })
 
   return router
