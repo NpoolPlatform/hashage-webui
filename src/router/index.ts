@@ -1,5 +1,4 @@
 import { route } from 'quasar/wrappers'
-import { useSettingStore } from 'src/store/setting'
 import {
   createMemoryHistory,
   createRouter,
@@ -36,11 +35,8 @@ export default route(function (/* { store, ssrContext } */) {
   })
 
   router.beforeEach((to, _, next) => {
-    const setting = useSettingStore()
-    setting.ShowHeaderAnnouncement = to.meta.ShowHeaderAnnouncement
-    setting.ShowMainHeader = to.meta.ShowMainHeader
-    setting.ShowBigLogo = to.meta.ShowBigLogo
-    next()
+    console.log('login interceptor', to, next)
+    // loginInterceptor(to, next)
   })
 
   return router

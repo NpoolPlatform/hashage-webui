@@ -1,4 +1,4 @@
-const AppID = 'ab7895dd-c4d1-48bd-be77-c0f255556a36'
+const AppID = '602b6a68-6c9d-4773-a3ca-746246ca3107'
 
 export {
   AppID

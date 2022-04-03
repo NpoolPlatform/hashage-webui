@@ -16,7 +16,7 @@ declare module '@vue/runtime-core' {
 // for each client)
 const api = axios.create({
   method: 'POST',
-  baseURL: '/api',
+  baseURL: process.env.DEV ? '/api' : 'https://api.npool.top:20402/api',
   headers: {
     'Content-Type': 'application/json',
     'X-App-ID': AppID
