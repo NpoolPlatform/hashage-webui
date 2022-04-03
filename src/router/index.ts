@@ -7,7 +7,7 @@ import {
   createWebHistory
 } from 'vue-router'
 import routes from './routes'
-import { loginInterceptor } from 'npool-cli-v2'
+import { loginInterceptor } from 'npool-cli-v2/utils'
 
 /*
  * If not building with SSR mode, you can
