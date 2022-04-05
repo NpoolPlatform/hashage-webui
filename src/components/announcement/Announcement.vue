@@ -1,20 +1,19 @@
 <template>
-  <div v-if='!hidden && announcement' class='background'>
+  <div class='background'>
     <div class='content'>
       <div class='announcement row'>
         <q-icon class='icon' name='volume_up' />
-        {{ announcement.Title }}
+        {{ announcement ? announcement.Title : $t('MSG_NO_ANNOUNCEMENT') }}
       </div>
     </div>
   </div>
 </template>
 
 <script setup lang='ts'>
-import { computed, ref, onMounted, onUnmounted } from 'vue'
+import { ref, onMounted, onUnmounted } from 'vue'
 import { useMailboxStore, Announcement } from 'npool-cli-v2'
 
 const mailbox = useMailboxStore()
-const hidden = computed(() => mailbox.Announcements.length === 0)
 
 const index = ref(0)
 const ticker = ref(-1)
@@ -22,9 +21,11 @@ const announcement = ref(undefined as unknown as Announcement)
 
 onMounted(() => {
   ticker.value = window.setInterval(() => {
-    index.value %= mailbox.Announcements.length
-    announcement.value = !hidden.value ? mailbox.Announcements[index.value] : undefined as unknown as Announcement
-    index.value += 1
+    if (mailbox.Announcements.length > 0) {
+      index.value %= mailbox.Announcements.length
+      announcement.value = mailbox.Announcements[index.value]
+      index.value += 1
+    }
   }, 3000)
 })
 
@@ -41,12 +42,12 @@ onUnmounted(() => {
   background-color: $dark-background
 
 .icon
-  width: 28px
-  height: 28px
+  width: $medium-item-height
+  height: $medium-item-height
 
 .announcement
-  height: 28px
+  height: $medium-item-height
   color: $medium-text
   width: 100%
-  line-height: 28px
+  line-height: $medium-item-height
 </style>

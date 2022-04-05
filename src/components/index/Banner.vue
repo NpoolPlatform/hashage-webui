@@ -2,7 +2,6 @@
   <div class='background'>
     <div class='banner'>
       <Announcement />
-      <MainHeader class='header' />
     </div>
   </div>
 </template>
@@ -10,18 +9,19 @@
 <script setup lang='ts'>
 import { defineAsyncComponent } from 'vue'
 
-const MainHeader = defineAsyncComponent(() => import('src/components/header/MainHeader.vue'))
 const Announcement = defineAsyncComponent(() => import('src/components/announcement/Announcement.vue'))
 
 </script>
 
 <style lang='sass' scoped>
 .banner
-  background-image: url('../../assets/BannerBg.svg')
   background-repeat: no-repeat
   background-size: 100% 660px
   min-height: 660px
   width: 100%
+  position: absolute
+  top: 0
+  z-index: -10
 
 .header
   margin-top: 20px

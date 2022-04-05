@@ -17,7 +17,7 @@ const routes: RouteRecordRaw[] = [
         component: () => import('pages/Index.vue'),
         meta: {
           ShowHeaderAnnouncement: true,
-          ShowMainHeader: false,
+          ShowMainHeader: true,
           ShowBigLogo: true,
           ShowFooterTop: true,
           ShowSignHelper: true,
