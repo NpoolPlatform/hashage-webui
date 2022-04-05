@@ -1,7 +1,9 @@
 <template>
-  <div class='banner background-main'>
-    <Announcement />
-    <MainHeader class='header' />
+  <div class='background'>
+    <div class='banner'>
+      <Announcement />
+      <MainHeader class='header' />
+    </div>
   </div>
 </template>
 
