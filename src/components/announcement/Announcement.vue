@@ -55,4 +55,5 @@ const onAnnouncementClick = () => {
   width: 100%
   line-height: $announcement-height
   cursor: pointer
+  font-size: $font-mini
 </style>
