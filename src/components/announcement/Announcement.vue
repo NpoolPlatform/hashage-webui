@@ -1,14 +1,25 @@
 <template>
-  <div class='announcement background-main'>
-    For test announcement
+  <div class='background'>
+    <div class='content'>
+      <div class='announcement row'>
+        <q-icon class='icon' name='volume_up' />
+        For test announcement
+      </div>
+    </div>
   </div>
 </template>
 
 <style lang='sass' scoped>
+.background
+  background-color: $dark-background
+
+.icon
+  width: 28px
+  height: 28px
+
 .announcement
-  min-height: 48px
-  color: white
+  height: 28px
+  color: $medium-text
   width: 100%
-  text-align: center
-  line-height: 48px
+  line-height: 28px
 </style>
