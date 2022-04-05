@@ -19,8 +19,7 @@ const setting = useSettingStore()
 
 <style lang='sass' scoped>
 .header
-  height: 80px
-  padding: 0 80px
+  height: $header-height
 
 .small-logo
   max-height: 40px

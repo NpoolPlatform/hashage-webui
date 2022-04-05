@@ -3,7 +3,9 @@
     <q-layout view='hHh Lpr lFf'>
       <Announcement v-if='setting.ShowHeaderAnnouncement' />
       <div class='header'>
-        <MainHeader v-if='setting.ShowMainHeader' class='content' />
+        <div class='content'>
+          <MainHeader v-if='setting.ShowMainHeader' class='content' />
+        </div>
       </div>
 
       <q-page-container class='background-main'>

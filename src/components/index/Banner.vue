@@ -1,28 +1,19 @@
 <template>
   <div class='background'>
-    <div class='banner'>
-      <Announcement />
-    </div>
+    <div class='banner' />
   </div>
 </template>
 
 <script setup lang='ts'>
-import { defineAsyncComponent } from 'vue'
-
-const Announcement = defineAsyncComponent(() => import('src/components/announcement/Announcement.vue'))
 
 </script>
 
 <style lang='sass' scoped>
 .banner
   background-repeat: no-repeat
-  background-size: 100% 660px
-  min-height: 660px
+  background-size: 100% $banner-view-height
+  min-height: $banner-view-height
   width: 100%
-  position: absolute
-  top: 0
+  margin-top: $banner-margin-top
   z-index: -10
-
-.header
-  margin-top: 20px
 </style>

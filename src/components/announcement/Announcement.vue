@@ -46,13 +46,13 @@ const onAnnouncementClick = () => {
   background-color: $dark-background
 
 .icon
-  width: $medium-item-height
-  height: $medium-item-height
+  width: $announcement-height
+  height: $announcement-height
 
 .announcement
-  height: $medium-item-height
+  height: $announcement-height
   color: $medium-text
   width: 100%
-  line-height: $medium-item-height
+  line-height: $announcement-height
   cursor: pointer
 </style>
