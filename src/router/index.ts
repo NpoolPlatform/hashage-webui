@@ -37,7 +37,6 @@ export default route(function (/* { store, ssrContext } */) {
   })
 
   router.beforeEach((to, _, next) => {
-    console.log('login interceptor', to, next)
     loginInterceptor(api, '/signin', to, next)
   })
 

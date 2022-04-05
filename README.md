@@ -1,6 +1,6 @@
-<a href="https://github.com/NpoolPlatform/ohash-webui/actions/workflows/ci.yml"><img src="https://github.com/NpoolPlatform/ohash-webui/workflows/test/badge.svg" alt="build status"></a>
+<a href="https://github.com/NpoolPlatform/hashage-webui/actions/workflows/ci.yml"><img src="https://github.com/NpoolPlatform/hashage-webui/workflows/test/badge.svg" alt="build status"></a>
 
-# ohash webui (ohash-webui)
+# hashage webui (hashage-webui)
 
 vue3 framework use quasar ui and pinia manage store
 

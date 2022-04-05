@@ -21,7 +21,8 @@ const routes: RouteRecordRaw[] = [
           ShowBigLogo: true,
           ShowFooterTop: true,
           ShowSignHelper: true,
-          ShowTopTip: false
+          ShowTopTip: false,
+          NeedLogined: false
         }
       }
     ]

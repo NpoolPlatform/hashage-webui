@@ -7557,11 +7557,12 @@ npm-run-path@^4.0.0, npm-run-path@^4.0.1:
   dependencies:
     path-key "^3.0.0"
 
-npool-cli-v2@0.0.61:
-  version "0.0.61"
-  resolved "https://registry.npmmirror.com/npool-cli-v2/-/npool-cli-v2-0.0.61.tgz#807b8790d852f9c2b01c7d55605e1d40b6822f60"
-  integrity sha512-gsJr672gP/DfN9MgE4UZUXtcoLn/rRBTulK7XUUCDM79tIMOHdoemGyIwCghhbpyMMLZIK0u22+UzdL3OcrErw==
+npool-cli-v2@0.0.85:
+  version "0.0.85"
+  resolved "https://registry.npmjs.org/npool-cli-v2/-/npool-cli-v2-0.0.85.tgz#3494d1c74a64cb8f16b1a627a06681008c8b0238"
+  integrity sha512-6CbPwz9dhjW8I/MD2saYJGE9QNgIBQYVdJPo/OHDwGB8khFl9ygbwKlfNxKKNkFXaCzTH301GNqN7JwocUazdw==
   dependencies:
+    "@quasar/extras" "^1.0.0"
     "@typescript-eslint/eslint-plugin" "^5.17.0"
     "@typescript-eslint/parser" "^5.17.0"
     acorn "^8.7.0"
@@ -7617,7 +7618,7 @@ npool-cli-v2@0.0.61:
     pinia "^2.0.13"
     pkg-dir "^5.0.0"
     pnpm "^6.32.4"
-    quasar "^2.6.5"
+    quasar "^2.0.0"
     randombytes "^2.1.0"
     resolve "^1.22.0"
     rollup-plugin-terser "^7.0.2"
@@ -8509,11 +8510,6 @@ quasar@^2.0.0:
   version "2.5.5"
   resolved "https://registry.npmmirror.com/quasar/-/quasar-2.5.5.tgz"
   integrity sha512-7UntzqIBih+xZLCB/f9pxuvNP3EBgexfQDbf8r9p58DHWAiSQwamLjcRHKqmujjp0uX1QChtp6oUxEkK+sFKtA==
-
-quasar@^2.6.5:
-  version "2.6.5"
-  resolved "https://registry.npmmirror.com/quasar/-/quasar-2.6.5.tgz#f744e2f12c53430da58da413d31e0720cbd6a6fa"
-  integrity sha512-ABaFt6eXDtXwV6RUt8VW5xxvqb8gpflIdYc8+ucGFnZ5zKH20YzqHOlIg/jJOw3T/C1s8T/c6T4yxvhxxj/uxA==
 
 queue-microtask@^1.2.2:
   version "1.2.3"
