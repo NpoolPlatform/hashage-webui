@@ -1,7 +1,7 @@
 <template>
   <div class='background'>
     <div class='content'>
-      <div class='announcement row'>
+      <div class='announcement row' @click='onAnnouncementClick'>
         <q-icon class='icon' name='volume_up' />
         {{ announcement ? announcement.Title : $t('MSG_NO_ANNOUNCEMENT') }}
       </div>
@@ -35,6 +35,10 @@ onUnmounted(() => {
   }
 })
 
+const onAnnouncementClick = () => {
+  console.log('TODO: goto announcement')
+}
+
 </script>
 
 <style lang='sass' scoped>
@@ -50,4 +54,5 @@ onUnmounted(() => {
   color: $medium-text
   width: 100%
   line-height: $medium-item-height
+  cursor: pointer
 </style>
