@@ -1,17 +1,18 @@
 <template>
-  <q-toolbar class='header row'>
+  <div class='header row'>
     <Logo v-model:width='logoWidth' class='logo' />
     <q-space />
-    <HeaderTools v-model:width='toolsWidth' />
+    <HeaderTools v-if='showFull' v-model:width='toolsWidth' />
+    <span v-else>...</span>
     <q-resize-observer @resize='onResize' />
-  </q-toolbar>
+  </div>
   <div>{{ logoWidth }} 1</div>
   <div>{{ toolsWidth }} 2</div>
   <div>{{ toolbarWidth }} 3</div>
 </template>
 
 <script setup lang='ts'>
-import { defineAsyncComponent, ref } from 'vue'
+import { defineAsyncComponent, ref, computed } from 'vue'
 import { Size } from '../../types/size'
 
 const Logo = defineAsyncComponent(() => import('src/components/logo/Logo.vue'))
@@ -24,6 +25,7 @@ const onResize = (size: Size) => {
 
 const logoWidth = ref(0)
 const toolsWidth = ref(0)
+const showFull = computed(() => logoWidth.value + toolsWidth.value <= toolbarWidth.value)
 
 </script>
 
