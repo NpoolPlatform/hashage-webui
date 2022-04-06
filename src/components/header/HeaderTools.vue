@@ -1,6 +1,6 @@
 <template>
   <q-tabs
-    v-model='tab'
+    v-model='curTab'
     narrow-indicator
     no-caps
     indicator-color='primary'
@@ -54,7 +54,7 @@ const tabs = ref([
     Target: '/'
   }
 ] as Array<Tab>)
-const tab = ref('MSG_RENT_POWER')
+const curTab = ref('MSG_RENT_POWER')
 
 const onTabClick = (tab: Tab) => {
   console.log('TODO: click', tab)
