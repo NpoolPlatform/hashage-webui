@@ -37,7 +37,6 @@ const onResize = (size: Size) => {
 <style lang='sass' scoped>
 .btn
   margin-right: $mini-item-width
-  padding: 0 $mini-item-width
 
 .separator
   margin: 4px $mini-item-height 4px $mini-item-width
