@@ -18,7 +18,7 @@ const routes: RouteRecordRaw[] = [
         meta: {
           ShowHeaderAnnouncement: true,
           ShowMainHeader: true,
-          ShowBigLogo: true,
+          ShowBigLogo: false,
           ShowFooterTop: true,
           ShowSignHelper: true,
           ShowTopTip: false,

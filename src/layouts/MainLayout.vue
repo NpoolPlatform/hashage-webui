@@ -26,7 +26,7 @@ import { defineAsyncComponent } from 'vue'
 import { useSettingStore } from 'npool-cli-v2'
 
 const MainHeader = defineAsyncComponent(() => import('src/components/header/MainHeader.vue'))
-// const LangLoader = defineAsyncComponent(() => import('src/components/lang/LangLoader.vue'))
+const LangLoader = defineAsyncComponent(() => import('src/components/lang/LangLoader.vue'))
 const MainFooter = defineAsyncComponent(() => import('src/components/footer/MainFooter.vue'))
 const Announcement = defineAsyncComponent(() => import('src/components/announcement/Announcement.vue'))
 
