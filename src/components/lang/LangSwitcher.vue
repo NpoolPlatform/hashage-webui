@@ -3,9 +3,9 @@
     <q-btn-dropdown
       dense
       flat
-      :icon='internet'
-      :dropdown-icon='downArrow'
-      text-color='white'
+      icon='language'
+      dropdown-icon='expand_more'
+      color='grey-7'
       size='12px'
     >
       <template #label>
@@ -15,7 +15,6 @@
       </template>
       <q-list class='langs'>
         <q-item
-          class='item'
           dense
           v-close-popup
           v-for='myLang in langs'
@@ -38,11 +37,8 @@
 </template>
 
 <script setup lang='ts'>
-import { ref, computed } from 'vue'
+import { computed } from 'vue'
 import { Language, useLangStore } from 'npool-cli-v2'
-
-const downArrow = ref('img: icons/DownArrow.svg')
-const internet = ref('img: icons/Internet.svg')
 
 const lang = useLangStore()
 const langs = computed(() => lang.Languages)
@@ -61,12 +57,15 @@ const onLangItemClick = (myLang: Language) => {
   line-height: 24px
 
 .langs
-  background-color: $dark
+  background-color: $dark-background
 
 .item:hover
-  background-color: $lightdark
+  background-color: $light-background
 
 .icon
   width: 24px
   margin-right: 10px
+
+.switcher
+  fill: $dark-text
 </style>

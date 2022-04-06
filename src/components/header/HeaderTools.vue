@@ -1,5 +1,6 @@
 <template>
   <q-tabs
+    dense
     v-model='curTab'
     narrow-indicator
     no-caps
@@ -13,11 +14,17 @@
         @click='onTabClick(tab)'
       />
     </div>
+    <q-btn :label='$t("MSG_SIGNIN")' />
+    <q-btn :label='$t("MSG_SIGNUP")' />
+    <q-separator vertical color='white' class='separator' />
+    <LangSwitcher />
   </q-tabs>
 </template>
 
 <script setup lang='ts'>
-import { ref } from 'vue'
+import { ref, defineAsyncComponent } from 'vue'
+
+const LangSwitcher = defineAsyncComponent(() => import('src/components/lang/LangSwitcher.vue'))
 
 interface Tab {
   Name: string
@@ -65,5 +72,4 @@ const onTabClick = (tab: Tab) => {
 <style lang='sass' scoped>
 .q-tab
   min-height: $medium-item-height
-  height: $medium-item-height
 </style>
