@@ -16,7 +16,8 @@ const HeaderTools = defineAsyncComponent(() => import('src/components/header/Hea
 
 <style lang='sass' scoped>
 .header
-  height: $header-height
+  height: $medium-item-height
+  margin-top: $medium-item-height
 
 .logo
   height: $medium-item-height
