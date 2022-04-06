@@ -2,7 +2,7 @@
   <div class='background'>
     <div class='content'>
       <div class='announcement row' @click='onAnnouncementClick'>
-        <q-icon class='icon' name='volume_up' />
+        <q-icon size='1.2rem' class='icon' name='volume_up' />
         {{ announcement ? announcement.Title : $t('MSG_NO_ANNOUNCEMENT') }}
       </div>
     </div>
