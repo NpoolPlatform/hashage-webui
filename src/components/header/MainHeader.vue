@@ -1,6 +1,6 @@
 <template>
   <div class='header row'>
-    <Logo v-model:width='logoWidth' class='logo' />
+    <Logo v-model:width='logoWidth' class='logo' @click='onLogoClick' />
     <q-space />
     <HeaderTabs :max-width='toolbarWidth - logoWidth - toolsWidth' />
     <q-space />
@@ -11,6 +11,7 @@
 
 <script setup lang='ts'>
 import { defineAsyncComponent, ref } from 'vue'
+import { useRouter } from 'vue-router'
 import { Size } from '../../types/size'
 
 const Logo = defineAsyncComponent(() => import('src/components/logo/Logo.vue'))
@@ -25,6 +26,11 @@ const onResize = (size: Size) => {
 const logoWidth = ref(0)
 const toolsWidth = ref(0)
 
+const router = useRouter()
+const onLogoClick = () => {
+  void router.push({ path: '/' })
+}
+
 </script>
 
 <style lang='sass' scoped>
@@ -35,4 +41,5 @@ const toolsWidth = ref(0)
 .logo
   height: $medium-item-height
   width: auto
+  cursor: pointer
 </style>

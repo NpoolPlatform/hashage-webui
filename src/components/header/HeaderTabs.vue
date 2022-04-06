@@ -23,6 +23,7 @@
 
 <script setup lang='ts'>
 import { ref, defineProps, toRef } from 'vue'
+import { useRouter } from 'vue-router'
 
 interface Props {
   maxWidth: number
@@ -68,8 +69,9 @@ const tabs = ref([
 ] as Array<Tab>)
 const curTab = ref('MSG_RENT_POWER')
 
+const router = useRouter()
 const onTabClick = (tab: Tab) => {
-  console.log('TODO: click', tab)
+  void router.push({ path: tab.Target })
 }
 
 </script>
