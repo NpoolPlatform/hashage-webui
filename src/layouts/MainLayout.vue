@@ -1,5 +1,5 @@
 <template>
-  <div class='background-main'>
+  <div class='background'>
     <q-layout view='hHh Lpr lFf'>
       <Announcement v-if='setting.ShowHeaderAnnouncement' />
       <div class='header'>
@@ -8,7 +8,7 @@
         </div>
       </div>
 
-      <q-page-container class='background-main'>
+      <q-page-container>
         <router-view />
       </q-page-container>
 

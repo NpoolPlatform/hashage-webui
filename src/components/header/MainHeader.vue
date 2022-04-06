@@ -1,9 +1,9 @@
 <template>
-  <q-toolbar class='header'>
+  <div class='header row'>
     <Logo class='logo' />
     <q-space />
     <HeaderTools />
-  </q-toolbar>
+  </div>
 </template>
 
 <script setup lang='ts'>

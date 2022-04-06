@@ -46,8 +46,9 @@ const onAnnouncementClick = () => {
   background-color: $dark-background
 
 .icon
-  width: $announcement-height
+  width: auto
   height: $announcement-height
+  margin-right: $mini-item-width
 
 .announcement
   height: $announcement-height
