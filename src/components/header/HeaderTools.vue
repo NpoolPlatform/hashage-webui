@@ -4,6 +4,9 @@
     v-model='curTab'
     narrow-indicator
     no-caps
+    inline-label
+    outside-arrows
+    mobile-arrows
     indicator-color='primary'
     class='no-shadow text-dark-text'
   >
@@ -14,15 +17,30 @@
         @click='onTabClick(tab)'
       />
     </div>
-    <q-btn :label='$t("MSG_SIGNIN")' />
-    <q-btn :label='$t("MSG_SIGNUP")' />
-    <q-separator vertical color='white' class='separator' />
+    <q-btn
+      dense
+      flat
+      :label='$t("MSG_SIGNIN")'
+      class='btn btn-round'
+    />
+    <q-btn
+      dense
+      flat
+      :label='$t("MSG_SIGNUP")'
+      class='btn btn-round btn-filled'
+    />
+    <q-separator
+      vertical
+      class='separator'
+    />
     <LangSwitcher />
+    <q-resize-observer @resize='onResize' />
   </q-tabs>
 </template>
 
 <script setup lang='ts'>
-import { ref, defineAsyncComponent } from 'vue'
+import { ref, defineAsyncComponent, defineEmits } from 'vue'
+import { Size } from '../../types/size'
 
 const LangSwitcher = defineAsyncComponent(() => import('src/components/lang/LangSwitcher.vue'))
 
@@ -67,9 +85,21 @@ const onTabClick = (tab: Tab) => {
   console.log('TODO: click', tab)
 }
 
+const emit = defineEmits<{(e: 'update:width', width: number): void}>()
+const onResize = (size: Size) => {
+  emit('update:width', size.width)
+}
+
 </script>
 
 <style lang='sass' scoped>
 .q-tab
   min-height: $medium-item-height
+
+.btn
+  margin-right: $mini-item-width
+  padding: 0 $mini-item-width
+
+.separator
+  margin: 4px 20px 4px 10px
 </style>

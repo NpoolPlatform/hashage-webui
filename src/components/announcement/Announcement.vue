@@ -11,13 +11,17 @@
 
 <script setup lang='ts'>
 import { ref, onMounted, onUnmounted } from 'vue'
-import { useMailboxStore, Announcement } from 'npool-cli-v2'
+import { useMailboxStore, Announcement, NotificationType } from 'npool-cli-v2'
+import { useI18n } from 'vue-i18n'
 
 const mailbox = useMailboxStore()
 
 const index = ref(0)
 const ticker = ref(-1)
 const announcement = ref(undefined as unknown as Announcement)
+
+// eslint-disable-next-line @typescript-eslint/unbound-method
+const { t } = useI18n({ useScope: 'global' })
 
 onMounted(() => {
   ticker.value = window.setInterval(() => {
@@ -27,6 +31,17 @@ onMounted(() => {
       index.value += 1
     }
   }, 3000)
+
+  mailbox.getAnnouncements({
+    Message: {
+      Error: {
+        Title: t('MSG_GET_LANGS'),
+        Message: t('MSG_GET_LANGS_FAIL'),
+        Popup: true,
+        Type: NotificationType.Error
+      }
+    }
+  })
 })
 
 onUnmounted(() => {

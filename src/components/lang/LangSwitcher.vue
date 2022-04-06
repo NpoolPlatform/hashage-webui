@@ -6,7 +6,8 @@
       icon='language'
       dropdown-icon='expand_more'
       color='grey-7'
-      size='12px'
+      size='0.875em'
+      no-caps
     >
       <template #label>
         <div class='label'>
