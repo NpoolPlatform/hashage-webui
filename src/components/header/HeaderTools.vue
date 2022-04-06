@@ -41,8 +41,4 @@ const onResize = (size: Size) => {
 
 .separator
   margin: 4px $mini-item-height 4px $mini-item-width
-
-.tabs
-  min-width: 200px
-  margin-right: $mini-item-width
 </style>

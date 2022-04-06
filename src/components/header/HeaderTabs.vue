@@ -77,4 +77,7 @@ const onTabClick = (tab: Tab) => {
 <style lang='sass' scoped>
 .q-tab
   min-height: $small-item-height
+
+.tabs
+  min-width: 200px
 </style>
