@@ -1,5 +1,6 @@
 <template>
   <q-tabs
+    v-model='tab'
     narrow-indicator
     no-caps
     indicator-color='primary'
@@ -18,14 +19,6 @@
 <script setup lang='ts'>
 import { ref } from 'vue'
 
-enum TabType {
-  TabIMO = 'imo',
-  TabMarketPlace = 'marketplace',
-  TabEvent = 'event',
-  TabBlog = 'blog',
-  TabWhiteList = 'whitelist'
-}
-
 interface Tab {
   Name: string
   Label: string
@@ -35,32 +28,33 @@ interface Tab {
 
 const tabs = ref([
   {
-    Name: TabType.TabIMO,
-    Label: 'MSG_IMO',
+    Name: 'MSG_RENT_POWER',
+    Label: 'MSG_RENT_POWER',
     Hot: true,
     Target: '/'
   }, {
-    Name: TabType.TabMarketPlace,
-    Label: 'MSG_MARKET_PLACE',
+    Name: 'MSG_INNOVATION_MINING',
+    Label: 'MSG_INNOVATION_MINING',
     Hot: false,
     Target: '/marketplace'
   }, {
-    Name: TabType.TabEvent,
-    Label: 'MSG_EVENT',
+    Name: 'MSG_ACTIVITY',
+    Label: 'MSG_ACTIVITY',
     Hot: false,
     Target: '/'
   }, {
-    Name: TabType.TabBlog,
-    Label: 'MSG_BLOG',
+    Name: 'MSG_SIMULATOR',
+    Label: 'MSG_SIMULATOR',
     Hot: false,
     Target: '/'
   }, {
-    Name: TabType.TabWhiteList,
-    Label: 'MSG_WHITE_LIST',
+    Name: 'MSG_ABOUT_US',
+    Label: 'MSG_ABOUT_US',
     Hot: false,
     Target: '/'
   }
 ] as Array<Tab>)
+const tab = ref('MSG_RENT_POWER')
 
 const onTabClick = (tab: Tab) => {
   console.log('TODO: click', tab)
