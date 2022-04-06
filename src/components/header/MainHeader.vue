@@ -19,6 +19,6 @@ const HeaderTools = defineAsyncComponent(() => import('src/components/header/Hea
   height: $header-height
 
 .logo
-  max-height: 40px
-  max-width: 71px
+  height: $medium-item-height
+  width: auto
 </style>

@@ -1,9 +1,15 @@
 <template>
-  <q-img :src='logoImg' />
+  <q-icon class='icon' :name='logoImg' />
 </template>
 
 <script setup lang='ts'>
 
-import logoImg from '../../assets/Logo.svg'
+const logoImg = 'img:logos/logo.svg'
 
 </script>
+
+<style lang='sass' scoped>
+::v-deep img
+  height: 100%
+  width: auto
+</style>
