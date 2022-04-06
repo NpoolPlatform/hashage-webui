@@ -40,7 +40,7 @@
   height: 3px
 
 .slogan
-  font-weight: 800
+  font-weight: 600
   font-size: $font-super-large
   margin-top: $medium-item-height
 
