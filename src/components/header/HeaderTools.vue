@@ -98,7 +98,7 @@ const onTabClick = (tab: Tab) => {
 }
 
 const opWidth = ref(0)
-const tabWidth = computed(() => maxWidth.value - opWidth.value)
+const tabWidth = computed(() => maxWidth.value - opWidth.value - 40)
 
 const onResize = (size: Size) => {
   opWidth.value = size.width
