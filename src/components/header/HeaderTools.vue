@@ -69,4 +69,7 @@ const onTabClick = (tab: Tab) => {
 </script>
 
 <style lang='sass' scoped>
+.q-tab
+  min-height: $medium-item-height
+  height: $medium-item-height
 </style>
