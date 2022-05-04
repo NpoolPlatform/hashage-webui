@@ -36,13 +36,13 @@ interface Itc {
 const itcs = [
   {
     Icon: 'img:' + gift,
-    Title: 'MSG_INVITATION_TITLE',
-    Caption: 'MSG_INVITATION_CAPTION',
+    Title: 'MSG_NEWBIE_GIFT_TITLE',
+    Caption: 'MSG_NEWBIE_GIFT_CAPTION',
     Target: ''
   }, {
     Icon: 'img:' + invitation,
-    Title: 'MSG_NEWBIE_GIFT_TITLE',
-    Caption: 'MSG_NEWBIE_GIFT_CAPTION',
+    Title: 'MSG_INVITATION_TITLE',
+    Caption: 'MSG_INVITATION_CAPTION',
     Target: ''
   }, {
     Icon: 'img:' + selected,
