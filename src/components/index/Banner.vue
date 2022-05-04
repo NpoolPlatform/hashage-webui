@@ -1,5 +1,5 @@
 <template>
-  <div class='background'>
+  <div class='row background'>
     <div class='content banner row'>
       <div>
         <q-separator class='separator' />
@@ -14,14 +14,43 @@
           flat
           class='btn btn-filled btn-round'
           :label='$t("MSG_START_MINING")'
-          icon-right='start'
         />
+        <div class='row social'>
+          <q-icon size='1.2rem' :name='"img:" + twitter' class='cursor-pointer' @click='onTwitterClick' />
+          <q-icon size='1.2rem' :name='"img:" + telegram' class='cursor-pointer' @click='onTelegramClick' />
+          <q-icon size='1.2rem' :name='"img:" + facebook' class='cursor-pointer' @click='onFacebookClick' />
+          <q-icon size='1.2rem' :name='"img:" + linkedin' class='cursor-pointer' @click='onLinkedinClick' />
+        </div>
       </div>
     </div>
+    <q-img class='main-banner' :src='mainBanner' />
   </div>
 </template>
 
 <script setup lang='ts'>
+
+import mainBanner from '../../assets/main-banner.png'
+
+import twitter from '../../assets/twitter-blue.png'
+import telegram from '../../assets/telegram-blue.png'
+import facebook from '../../assets/facebook-blue.png'
+import linkedin from '../../assets/linkedin-blue.png'
+
+const onTwitterClick = () => {
+  // TODO
+}
+
+const onTelegramClick = () => {
+  // TODO
+}
+
+const onFacebookClick = () => {
+  // TODO
+}
+
+const onLinkedinClick = () => {
+  // TODO
+}
 
 </script>
 
@@ -31,7 +60,7 @@
   background-size: 100% $banner-view-height
   min-height: $banner-view-height
   width: 100%
-  z-index: -10
+  z-index: 10
 
 .separator
   background-color: $primary
@@ -50,4 +79,19 @@
 
 .btn
   margin-top: 100px
+  padding: 0 24px
+
+.main-banner
+  position: absolute
+  width: 100%
+  opacity: 0.1
+
+.social
+  max-width: 150px
+  justify-content: space-between
+  margin-top: $mini-item-height
+
+.social.icon
+  height: 16px
+  line-height: 16px
 </style>

@@ -8,7 +8,7 @@
 import { defineEmits } from 'vue'
 import { Size } from '../../types/size'
 
-const logoImg = 'img:logos/logo.svg'
+const logoImg = 'img:logos/logo.png'
 
 const emit = defineEmits<{(e: 'update:width', width: number): void}>()
 const onResize = (size: Size) => {
