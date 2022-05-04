@@ -23,13 +23,10 @@
         </div>
       </div>
     </div>
-    <q-img class='main-banner' :src='mainBanner' />
   </div>
 </template>
 
 <script setup lang='ts'>
-
-import mainBanner from '../../assets/main-banner.png'
 
 import twitter from '../../assets/twitter-blue.png'
 import telegram from '../../assets/telegram-blue.png'
@@ -80,11 +77,6 @@ const onLinkedinClick = () => {
 .btn
   margin-top: 100px
   padding: 0 24px
-
-.main-banner
-  position: absolute
-  width: 100%
-  opacity: 0.1
 
 .social
   max-width: 150px
