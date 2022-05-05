@@ -1,5 +1,4 @@
 import { route } from 'quasar/wrappers'
-import { api } from 'src/boot/axios'
 import {
   createMemoryHistory,
   createRouter,
@@ -37,7 +36,7 @@ export default route(function (/* { store, ssrContext } */) {
   })
 
   router.beforeEach((to, _, next) => {
-    loginInterceptor(api, '/signin', to, next)
+    loginInterceptor('/signin', to, next)
   })
 
   return router

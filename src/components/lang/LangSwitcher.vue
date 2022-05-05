@@ -4,17 +4,16 @@
       dense
       flat
       icon='language'
-      dropdown-icon='expand_more'
-      color='grey-7'
-      size='0.875em'
-      no-caps
+      dropdown-icon='keyboard_arrow_down'
+      text-color='grey-8'
+      size='1em'
     >
       <template #label>
         <div class='label'>
           {{ langLabel }}
         </div>
       </template>
-      <q-list class='langs'>
+      <q-list>
         <q-item
           dense
           v-close-popup
@@ -39,11 +38,12 @@
 
 <script setup lang='ts'>
 import { computed } from 'vue'
-import { Language, useLangStore } from 'npool-cli-v2'
+import { Language, useLangStore, useLocaleStore } from 'npool-cli-v2'
 
 const lang = useLangStore()
-const langs = computed(() => lang.Languages)
-const langLabel = computed(() => lang.CurLang?.Short !== '' ? lang.CurLang?.Short : lang.CurLang.Lang)
+const locale = useLocaleStore()
+const langs = computed(() => locale.Languages)
+const langLabel = computed(() => locale.CurLang?.Short !== '' ? locale.CurLang?.Short : locale.CurLang.Lang)
 
 const onLangItemClick = (myLang: Language) => {
   lang.setLang(myLang)
@@ -57,16 +57,7 @@ const onLangItemClick = (myLang: Language) => {
   margin-left: 6px
   line-height: 24px
 
-.langs
-  background-color: $dark-background
-
-.item:hover
-  background-color: $light-background
-
 .icon
   width: 24px
   margin-right: 10px
-
-.switcher
-  fill: $dark-text
 </style>

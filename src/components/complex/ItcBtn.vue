@@ -5,10 +5,10 @@
         <q-icon size='3rem' :name='icon' />
       </div>
       <div class='row justify-center'>
-        <span class='small-label label small-line-gap small-line-first'>{{ title }}</span>
+        <span class='small-label label small-line-gap small-line-first'>{{ $t(title) }}</span>
       </div>
       <div class='row justify-center'>
-        <span class='small-caption caption small-line-gap'>{{ caption }}</span>
+        <span class='small-caption caption small-line-gap'>{{ $t(caption) }}</span>
       </div>
     </div>
   </div>
