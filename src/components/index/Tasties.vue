@@ -62,4 +62,5 @@ const onTastyClick = (itc: Itc) => {
 <style lang='sass' scoped>
 .itc
   padding: 0 $large-item-height
+  max-width: 330px
 </style>
