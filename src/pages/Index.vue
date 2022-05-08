@@ -2,6 +2,12 @@
   <q-img class='main-banner' :src='mainBanner' />
   <Banner />
   <Tasties />
+  <div class='products'>
+    <Products />
+  </div>
+  <div class='section'>
+    <Holding />
+  </div>
 </template>
 
 <script setup lang='ts'>
@@ -11,6 +17,8 @@ import mainBanner from '../assets/main-banner.png'
 
 const Banner = defineAsyncComponent(() => import('src/components/index/Banner.vue'))
 const Tasties = defineAsyncComponent(() => import('src/components/index/Tasties.vue'))
+const Products = defineAsyncComponent(() => import('src/components/index/Products.vue'))
+const Holding = defineAsyncComponent(() => import('src/components/index/Holding.vue'))
 
 </script>
 
@@ -19,4 +27,10 @@ const Tasties = defineAsyncComponent(() => import('src/components/index/Tasties.
   position: absolute
   width: 100%
   opacity: 0.1
+
+.products
+  margin-top: 120px
+
+.section
+  margin-top: 240px
 </style>
