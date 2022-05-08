@@ -2,7 +2,7 @@
   "name": "hashage-webui",
   "version": "0.0.1",
   "description": "vue3 framework use quasar ui and pinia manage store",
-  "productName": "HashAge Webui",
+  "productName": "HashAge",
   "author": "Entropy Pool Team <kikakkz@hotmail.com>",
   "private": true,
   "scripts": {
